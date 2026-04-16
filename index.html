@@ -17,20 +17,20 @@
     --black-3: #141414;
     --black-4: #1c1c1c;
     --white: #f5f0eb;
-    --white-dim: rgba(245,240,235,0.6);
+    --white-dim: rgba(245,240,235,0.85);
     --white-faint: rgba(245,240,235,0.08);
     --grain-opacity: 0.04;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; font-size: 16px; }
+  html { scroll-behavior: smooth; font-size: 17px; }
 
   body {
     background: var(--black);
     color: var(--white);
     font-family: 'Barlow', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     overflow-x: hidden;
     cursor: none;
   }
@@ -219,7 +219,7 @@
   }
   .hero-sub {
     font-size: 1.05rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--white-dim);
     max-width: 460px;
     line-height: 1.7;
@@ -746,7 +746,7 @@
     font-size: 1.2rem;
     color: var(--white-dim);
     font-family: 'Barlow', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
   }
   .ticket-features {
     list-style: none;
@@ -1389,6 +1389,33 @@
     footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
   }
+
+
+  .linkedin-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+    cursor: none;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .linkedin-btn:hover {
+    background: #0077b5;
+    transform: scale(1.1);
+    border-color: #0077b5;
+    color: #fff;
+  }
+  .footer-contact a:hover { color: var(--red) !important; transition: color 0.3s; cursor: none; }
 </style>
 </head>
 <body>
@@ -1548,51 +1575,73 @@
   <div class="speakers-track">
 
     <div class="speaker-card reveal">
-      <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem">DR</div>
-      <div class="speaker-overlay">
-        <span class="speaker-tag">Neuroscience</span>
-        <div class="speaker-name">Dr. Riya Sharma</div>
-        <div class="speaker-topic">The Architecture of Memory and Who We Choose to Be</div>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker1.jpg" alt="Abhai Naveen" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">AN</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Abhai Naveen</div>
+        <div class="speaker-topic">Actor &amp; Director</div>
       </div>
       <div class="speaker-glow"></div>
     </div>
 
     <div class="speaker-card reveal reveal-delay-1">
-      <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem">AK</div>
-      <div class="speaker-overlay">
-        <span class="speaker-tag">Technology</span>
-        <div class="speaker-name">Aditya Kumar</div>
-        <div class="speaker-topic">Why AI Needs a Conscience, Not Just Code</div>
+      <a href="https://www.linkedin.com/in/avinvenkat?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker2.jpg" alt="Avinash Venkat" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">AV</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Avinash Venkat</div>
+        <div class="speaker-topic">Content Creator</div>
       </div>
       <div class="speaker-glow"></div>
     </div>
 
     <div class="speaker-card reveal reveal-delay-2">
-      <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem">PV</div>
-      <div class="speaker-overlay">
-        <span class="speaker-tag">Climate & Society</span>
-        <div class="speaker-name">Priya Venkat</div>
-        <div class="speaker-topic">Designing Cities That Breathe</div>
+      <a href="https://www.linkedin.com/in/professor-balakista-reddy?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker3.jpg" alt="Balakista Reddy" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">BR</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Balakista Reddy</div>
+        <div class="speaker-topic">Chairman, TS Council of Higher Education</div>
       </div>
       <div class="speaker-glow"></div>
     </div>
 
     <div class="speaker-card reveal reveal-delay-3">
-      <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem">MR</div>
-      <div class="speaker-overlay">
-        <span class="speaker-tag">Philosophy</span>
-        <div class="speaker-name">Mohan Reddy</div>
-        <div class="speaker-topic">The Radical Act of Changing Your Mind</div>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker4.jpg" alt="Roopa Koduvayur" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">RK</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Roopa Koduvayur</div>
+        <div class="speaker-topic">Actress, Doctor, Dancer</div>
       </div>
       <div class="speaker-glow"></div>
     </div>
 
     <div class="speaker-card reveal reveal-delay-4">
-      <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem">SN</div>
-      <div class="speaker-overlay">
-        <span class="speaker-tag">Entrepreneurship</span>
-        <div class="speaker-name">Sneha Naidu</div>
-        <div class="speaker-topic">Failure Is the First Draft of Success</div>
+      <a href="https://www.linkedin.com/in/sonukr0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker5.jpg" alt="Sonu Kumar" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">SK</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Sonu Kumar</div>
+        <div class="speaker-topic">Entrepreneur</div>
+      </div>
+      <div class="speaker-glow"></div>
+    </div>
+
+    <div class="speaker-card reveal reveal-delay-5">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
+        <img src="resources/speaker6.jpg" alt="Shabd Shourya" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">SS</div>
+      </a>
+      <div class="speaker-overlay" style="pointer-events:none">
+        <div class="speaker-name">Shabd Shourya</div>
+        <div class="speaker-topic">Young Storyteller</div>
       </div>
       <div class="speaker-glow"></div>
     </div>
@@ -1700,6 +1749,530 @@
 
 <div class="divider"></div>
 
+<!-- TEAM -->
+<section id="team">
+  <canvas id="team-canvas"></canvas>
+
+  <div class="team-header reveal">
+    <div class="section-label" style="justify-content:center">The People Behind</div>
+    <h2 class="team-title">Our <span class="team-title-accent">Team</span></h2>
+  </div>
+
+  <div class="team-tabs-wrapper reveal reveal-delay-1">
+    <div class="team-tabs" id="teamTabs">
+      <div class="team-tab-pill" id="teamPill"></div>
+      <div class="team-tab active" data-tab="core" onclick="switchTeamTab('core', this)">Core Committee</div>
+      <div class="team-tab" data-tab="organizing" onclick="switchTeamTab('organizing', this)">Organizing Committee</div>
+    </div>
+  </div>
+
+  <div class="team-grid-outer">
+
+    <!-- Core Committee -->
+    <div class="team-content active" id="tab-core">
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/profileofsharmadkm?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <div class="team-card-img-wrap">
+          <img src="resources/faculty_sharma.jpg" alt="Mr. D. K. M. Sharma" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">DK</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Mr. D. K. M. Sharma</div>
+          <div class="team-role">Faculty Coordinator</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/praneeth-chetty/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_praneeth_chetty.jpg" alt="Praneeth Chetty" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PC</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Praneeth Chetty</div>
+          <div class="team-role">Licensee</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/laasyakshara-podishetty?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_laasyakshara.jpg" alt="Laasyakshara" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">LA</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Laasyakshara</div>
+          <div class="team-role">Co-Licensee</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/charantejvalluru" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/CC/Charan tej.jpg" alt="Charan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">CH</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Charan</div>
+          <div class="team-role">Digital &amp; Documentation Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_abhilash.jpg" alt="Abhilash" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">AB</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Abhilash</div>
+          <div class="team-role">Design Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/prashasth-kamidri-794a63288/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_prashasth.jpg" alt="Prashasth" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PR</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Prashasth</div>
+          <div class="team-role">Design Co-Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_praneeth.jpg" alt="Praneeth" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PN</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Praneeth</div>
+          <div class="team-role">Hospitality Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_lohitaksh.jpg" alt="Lohitaksh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">LO</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Lohitaksh</div>
+          <div class="team-role">Marketing Co-Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/sharath-chandra-reddy-8898902a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_sharath.jpg" alt="Sharath" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">SH</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Sharath</div>
+          <div class="team-role">Production Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/pruthvi-pokala-896a09398?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_prudvi.jpg" alt="Prudvi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PD</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Prudvi</div>
+          <div class="team-role">Production Co-Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_shreshta.jpg" alt="Shreshta" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">SR</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Shreshta</div>
+          <div class="team-role">SMP Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/jonathan-raj-577547308?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_jonathan.jpg" alt="Jonathan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">JO</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Jonathan</div>
+          <div class="team-role">Speaker Research Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/mrudumaiperala07" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/core_mrudumai.jpg" alt="Mrudumai" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">MR</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Mrudumai</div>
+          <div class="team-role">Sponsorship &amp; Promotions Lead</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+    </div><!-- /tab-core -->
+
+    <!-- Organizing Committee -->
+    <div class="team-content" id="tab-organizing">
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/bhavana-keerthi-808381403?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_bhavana_keerthi.jpg" alt="Bhavana Keerthi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">BK</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Bhavana Keerthi</div>
+          <div class="team-role">Design</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_ravi_teja.jpg" alt="Ravi Teja" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">RT</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Ravi Teja</div>
+          <div class="team-role">Design</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/hasini-s-9195963a1" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_hasini_design.jpg" alt="Hasini" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">HD</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Hasini</div>
+          <div class="team-role">Design</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/11-akhil-allam" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_akhil.jpg" alt="Akhil" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">AH</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Akhil</div>
+          <div class="team-role">Documentation</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/govind-ganesh-yada-520915326/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_govind_ganesh.jpg" alt="Govind Ganesh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">GG</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Govind Ganesh</div>
+          <div class="team-role">Hospitality</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/srikar-konga-a64466403" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_srikar.jpg" alt="Srikar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">SK</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Srikar</div>
+          <div class="team-role">Hospitality</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/vineel-nalla-498b86276utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_vineel.jpg" alt="Vineel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">VI</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Vineel</div>
+          <div class="team-role">Hospitality</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_yashaswini.jpg" alt="Yashaswini" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">YA</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Yashaswini</div>
+          <div class="team-role">Marketing</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/sahithi-goud-748898360" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_sahithi.jpg" alt="Sahithi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">SA</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Sahithi</div>
+          <div class="team-role">Marketing</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/bachumanojkumar" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_manoj_kumar.jpg" alt="Manoj Kumar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">MK</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Manoj Kumar</div>
+          <div class="team-role">Marketing</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/keerthana-tumuluri-42b2a6403/" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_keerthana.jpg" alt="Keerthana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">KE</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Keerthana</div>
+          <div class="team-role">SMP</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/manasvini-darbha?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_manasvini.jpg" alt="Manasvini" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">MN</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Manasvini</div>
+          <div class="team-role">SMP</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/prathamesh-kulkarni-ba62313a6?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_prathamesh.jpg" alt="Prathamesh" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PM</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Prathamesh</div>
+          <div class="team-role">Speaker Research</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/hansika-b-14707134a?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_hansika.jpg" alt="Hansika" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">HN</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Hansika</div>
+          <div class="team-role">Speaker Research</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/navadeep-tadakamalla-ab853b308?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_navadeep.jpg" alt="Navadeep" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">ND</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Navadeep</div>
+          <div class="team-role">Speaker Research</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/sumith-eedunuri-1b9a713b9utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_sumith.jpg" alt="Sumith" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">SU</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Sumith</div>
+          <div class="team-role">Sponsorship</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/yerravelly-hasini-9899ba312" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_hasini_sponsorship.jpg" alt="Hasini" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">HS</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Hasini</div>
+          <div class="team-role">Sponsorship</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/vishnu-vardhan-satla-b21293327utm_source=share_via&utm_content=profile&utm_medium=member_android" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_vishnuvardhan.jpg" alt="Vishnuvardhan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">VV</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Vishnuvardhan</div>
+          <div class="team-role">Production</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/prashanthgarigaboina" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_prashanth.jpg" alt="Prashanth" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">PS</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Prashanth</div>
+          <div class="team-role">Production</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://in.linkedin.com/in/akshay-krishna-kunchala-9679ab381" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_akshay_krishna.jpg" alt="Akshay Krishna" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">AK</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Akshay Krishna</div>
+          <div class="team-role">Production</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/nallagatla-bharath-80528936b" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_bharath.jpg" alt="Bharath" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">BH</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Bharath</div>
+          <div class="team-role">Production</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+      <div class="team-card card-reveal">
+        <a href="https://www.linkedin.com/in/gunnala-raghavb00b97366" class="linkedin-btn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <div class="team-card-img-wrap">
+          <img src="resources/org_raghavendra.jpg" alt="Raghavendra" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="team-img-placeholder" style="display:none">RG</div>
+        </div>
+        <div class="team-overlay">
+          <div class="team-name">Raghavendra</div>
+          <div class="team-role">Production</div>
+        </div>
+        <div class="team-card-glow"></div>
+        <div class="team-card-light"></div>
+      </div>
+
+    </div><!-- /tab-organizing -->
+
+  </div><!-- /team-grid-outer -->
+</section>
+
 <!-- FAQ -->
 <section id="faq">
   <div class="section-label reveal" style="justify-content:center">Got Questions?</div>
@@ -1742,278 +2315,6 @@
 
 <div class="divider"></div>
 
-<!-- TEAM -->
-<section id="team">
-  <canvas id="team-canvas"></canvas>
-
-  <div class="team-header reveal">
-    <div class="section-label" style="justify-content:center">The People Behind</div>
-    <h2 class="team-title">Our <span class="team-title-accent">Team</span></h2>
-  </div>
-
-  <div class="team-tabs-wrapper reveal reveal-delay-1">
-    <div class="team-tabs" id="teamTabs">
-      <div class="team-tab-pill" id="teamPill"></div>
-      <div class="team-tab active" data-tab="core" onclick="switchTeamTab('core', this)">Core Committee</div>
-      <div class="team-tab" data-tab="organizing" onclick="switchTeamTab('organizing', this)">Organizing Committee</div>
-    </div>
-  </div>
-
-  <div class="team-grid-outer">
-
-    <!-- Core Committee -->
-    <div class="team-content active" id="tab-core">
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class=""></div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Praneeth Chetty</div>
-          <div class="team-role">Licensee &amp; President</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">SR</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Sneha Reddy</div>
-          <div class="team-role">Creative Director</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">VM</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Vikash Mehta</div>
-          <div class="team-role">Curation Lead</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">PG</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Priya Gupta</div>
-          <div class="team-role">Operations Head</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">RN</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Rohan Nair</div>
-          <div class="team-role">Tech &amp; Media</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">DV</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Divya Varma</div>
-          <div class="team-role">Speaker Relations</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">KS</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Karan Shah</div>
-          <div class="team-role">Finance Lead</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">AN</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Aditi Nambiar</div>
-          <div class="team-role">Brand Strategy</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">ST</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Siddharth T.</div>
-          <div class="team-role">Stage &amp; Production</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">MJ</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Meera Joshi</div>
-          <div class="team-role">Community Lead</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-    </div><!-- /tab-core -->
-
-    <!-- Organizing Committee -->
-    <div class="team-content" id="tab-organizing">
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">NC</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Nikhil Chandra</div>
-          <div class="team-role">Event Coordinator</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">TP</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Tanvi Pillai</div>
-          <div class="team-role">Volunteer Head</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">YK</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Yash Kulkarni</div>
-          <div class="team-role">Logistics Manager</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">IA</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Ishaan Agarwal</div>
-          <div class="team-role">Social Media</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">SP</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Sana Patel</div>
-          <div class="team-role">Hospitality</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">RB</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Rahul Bose</div>
-          <div class="team-role">AV &amp; Streaming</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">LP</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Lavanya Prasad</div>
-          <div class="team-role">Design Team</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">AO</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Arnav Ojha</div>
-          <div class="team-role">Photography</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">ZK</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Zara Khan</div>
-          <div class="team-role">Outreach</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-      <div class="team-card card-reveal">
-        <div class="team-card-img-wrap">
-          <div class="team-img-placeholder">HS</div>
-        </div>
-        <div class="team-overlay">
-          <div class="team-name">Harsh Sharma</div>
-          <div class="team-role">Registration</div>
-        </div>
-        <div class="team-card-glow"></div>
-        <div class="team-card-light"></div>
-      </div>
-
-    </div><!-- /tab-organizing -->
-
-  </div><!-- /team-grid-outer -->
-</section>
-
 <!-- FINAL CTA -->
 <section id="final-cta">
   <div class="cta-bg"></div>
@@ -2033,12 +2334,26 @@
 <footer>
   <div class="footer-logo"><span>TEDx</span>VBIT</div>
   <div class="footer-text">This independent event is operated under license from TED.<br>TEDxVBIT — Hyderabad, India — 2025</div>
-  <div class="footer-links">
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Twitter</a>
-    <a href="#">Contact</a>
-    <a href="#">Privacy</a>
+  <div class="footer-contact">
+    <div style="font-size: 0.85rem; color: var(--white); margin-bottom: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Stay Connected</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.8rem; color: rgba(245,240,235,0.6);">
+      <div style="display: flex; align-items: start; gap: 8px;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+        <span>VBIT Campus, Aushapur, Ghatkesar, near HPCL,<br>Hyderabad, Telangana 501301</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M0 4v16h24v-16h-24zm12 9.5l-10-6.837v-1.163l10 6.837 10-6.837v1.163l-10 6.837z"/></svg>
+        <a href="mailto:tedxvbit@gmail.com" style="color: inherit; text-decoration: none;">tedxvbit@gmail.com</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <a href="https://instagram.com/tedxvbit" target="_blank" style="color: inherit; text-decoration: none;">@tedxvbit</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <a href="https://linkedin.com/company/tedxvbit" target="_blank" style="color: inherit; text-decoration: none;">linkedin/tedxvbit</a>
+      </div>
+    </div>
   </div>
 </footer>
 
