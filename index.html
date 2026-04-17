@@ -715,7 +715,7 @@
   }
   .talk-item:hover { background: var(--black-3); }
   .talk-item::after {
-    content: 'â†—';
+    content: '↗';
     position: absolute;
     top: 40px; right: 40px;
     font-size: 1.2rem;
@@ -1416,14 +1416,14 @@
     display: inline-flex;
     animation: marquee 20s linear infinite;
   }
-  .marquee-track span {
+  .marquee-track > span {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.2em;
     padding: 0 40px;
     color: rgba(255,255,255,0.7);
   }
-  .marquee-track span.dot {
+  .marquee-track > span.dot {
     color: rgba(255,255,255,0.4);
     padding: 0;
   }
@@ -1521,6 +1521,11 @@
     #final-cta { padding: 100px 24px; }
     footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-masonry { columns: 1; gap: 16px; }
+    .gallery-item img, .gallery-item .img-placeholder { height: auto !important; max-height: 400px; object-fit: cover; }
   }
 
 
@@ -1644,7 +1649,7 @@
     <span>Ideas Worth Spreading</span><span class="dot">✦</span>
     <span>April 18, 2026</span><span class="dot">✦</span>
     <span>VBIT Hyderabad</span><span class="dot">✦</span>
-    <span>5 Speakers</span><span class="dot">✦</span>
+    <span>4 Speakers</span><span class="dot">✦</span>
     <span>SOLVE FOR Y</span><span class="dot">✦</span>
     <span><span style="letter-spacing: 0;">TED<span style="font-size:0.8em;vertical-align:middle">x</span>VBIT S7</span></span><span class="dot">✦</span>
   </div>
@@ -1683,7 +1688,7 @@
         <span class="lbl">Limited Seats</span>
       </div>
       <div class="stat-box">
-        <span class="num" data-target="5">0</span>
+        <span class="num" data-target="4">0</span>
         <span class="lbl">Speakers This Season</span>
       </div>
     </div>
@@ -1780,18 +1785,6 @@
     </div>
 
     <div class="speaker-card reveal reveal-delay-4">
-      <a href="https://www.linkedin.com/in/sonukr0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
-        <img src="./resources/speakers/Sonu.jpeg" alt="Sonu Kumar" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">SK</div>
-      </a>
-      <div class="speaker-overlay" style="pointer-events:none">
-        <div class="speaker-name">Sonu Kumar</div>
-        <div class="speaker-topic">Entrepreneur</div>
-      </div>
-      <div class="speaker-glow"></div>
-    </div>
-
-    <div class="speaker-card reveal reveal-delay-5">
       <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" style="display:block;cursor:none">
         <img src="./resources/speakers/Shabd.jpeg" alt="Shabd Shourya" class="speaker-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="img-placeholder speaker-img" style="height:380px;font-size:2rem;display:none">SS</div>
